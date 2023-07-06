@@ -49,7 +49,9 @@ class MainActivity : AppCompatActivity() {
         if (palavra.isEmpty()) {
             Toast.makeText(this, "Campo vazio, insira uma palavra", Toast.LENGTH_SHORT).show()
         } else {
-            this.tvPalavraSorteio.text = palavra
+            this.sorteio.addPalavra(palavra)
+            Toast.makeText(this, "Palavra cadastrada: $palavra", Toast.LENGTH_SHORT).show()
         }
+        this.etInputSorteio.setText("")
     }
 }
